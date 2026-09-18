@@ -1,0 +1,14 @@
+# Suggested demo plans (select in Console/API; not enforced by this manifest):
+# Runtime: one replica, 2 GiB RAM. PostgreSQL: startup-4, PostgreSQL 16.
+services:
+  hasura:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - hasura-postgres
+    environment:
+      DATABASE_URL: postgresql://USER:PASSWORD@hasura-postgres:5432/defaultdb
+      # Add HASURA_GRAPHQL_ADMIN_SECRET and AIVEN_CA_CERT_BASE64 in Runtime.
+  hasura-postgres:
+    image: postgres:16

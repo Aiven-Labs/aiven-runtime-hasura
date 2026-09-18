@@ -1,0 +1,31 @@
+# After loading notes.sql and tracking public.starter_notes:
+query ListNotes {
+  starter_notes(order_by: {id: asc}) {
+    id
+    title
+    completed
+    created_at
+  }
+}
+
+mutation CreateNote {
+  insert_starter_notes_one(object: {title: "Hello from Aiven Runtime"}) {
+    id
+    title
+  }
+}
+
+mutation CompleteFirstNote {
+  update_starter_notes_by_pk(pk_columns: {id: 1}, _set: {completed: true}) {
+    id
+    completed
+  }
+}
+
+subscription WatchNotes {
+  starter_notes(order_by: {id: asc}) {
+    id
+    title
+    completed
+  }
+}
