@@ -54,7 +54,7 @@ For Aiven MCP/API deployment, build the root Dockerfile and create the `applicat
 | Runtime | One replica, 2 GiB RAM (`startup-100-2048` where available) | Hasura engine and Console |
 | PostgreSQL | `startup-4` or equivalent 4 GiB plan, PostgreSQL 16 | Metadata and application data |
 
-These are conservative starting suggestions, not benchmarked minimums or production sizing. They are documented in the Runtime manifest as comments; plans are selected in Console/API and are not enforced by Compose. Review available internal/free plans and current pricing before creating services. Live validation is pending; see [VALIDATION.md](VALIDATION.md).
+These sizes passed the small live demo checks in VALIDATION.md. They are not benchmarked minimums or production sizing. They are documented in the Runtime manifest as comments; plans are selected in Console/API and are not enforced by Compose. Review available internal/free plans and current pricing before creating services. See [VALIDATION.md](VALIDATION.md) for the tested deployment and listed pricing.
 
 ### Required Runtime settings
 
