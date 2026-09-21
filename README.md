@@ -120,3 +120,8 @@ See [VALIDATION.md](VALIDATION.md) for completed checks and remaining live tests
 - [PostgreSQL requirements](https://hasura.io/docs/2.0/deployment/postgres-requirements/)
 - [Hasura authentication and authorization](https://hasura.io/docs/2.0/auth/overview/)
 - [Aiven Runtime Compose manifests](https://aiven.io/docs/products/runtime/manifest-files/compose-files)
+
+## License
+
+The template code in this repository is licensed under the [MIT License](LICENSE).
+Third-party applications, dependencies and container images retain their own licenses.
